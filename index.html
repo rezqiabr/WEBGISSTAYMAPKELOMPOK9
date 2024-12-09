@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayMap: Explore Hotels in Banyumanik and Tembalang</title>
+    <link rel="stylesheet" href="style.css" /> <!-- Link ke file CSS eksternal -->
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            StayMap
+            <p>Hotels in Banyumanik and Tembalang</p>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#map">Map</a>
+            <a href="#team">Our Team</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <h1>Welcome to StayMap</h1>
+        <p>Comparing three popular website to book your hotels: StayMap is your guide to finding the best hotels choice in Banyumanik and Tembalang. Explore nearby options and enjoy your stay in Semarang!</p>
+    </section>
+
+    <!-- Sidebar and Map Layout -->
+    <div class="container">
+        <!-- Sidebar for Hotel Listings -->
+        <div class="sidebar">
+            <h2>Search Hotels</h2>
+            <input type="text" id="searchBar" placeholder="Search hotels..." style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 5px;" oninput="filterHotels()">
+            <div id="hotelList">
+                <div class="hotel-card">
+                    <img src="Horrison_Inn.jpg" alt="Horison Inn Antawirya">
+                    <h3>Horison Inn Antawirya</h3>
+                    <p>⭐ 4.6 | Rp918.000,00/night</p>
+                    <button onclick="openModal('Horison Inn Antawirya', '⭐ 4.6 | Rp918.000,00/night', 'Jl. Prof. Soedarto, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50275', '(247)6405000', 'Public Facilities: Parking, Elevator, WiFi, Printer, 24-hour Receptionist', 'Cheapest Room Facilities: Without breakfast, 1 twin bed, 24.0 m², Shower, Hot water, Air conditioning, Television. Desk, Coffee / tea maker', 'Most Expensive Room Facilities: Breakfast included for 1 pax, 1 double bed, 27.0 m², Shower, Hot water, Air conditioning, Television. Desk, Coffee / tea maker, Refrigerator', 'Check-in at 14.00 and Check-out at 12.00', ['Rp918.000,00', 'Rp1.177.250,00'], ['Rp1.049.760,00', 'Rp1.346.220,00'], ['Rp1.364.327,00', 'Rp1.668.801,00'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Alton.jpg" alt="The Alton">
+                    <h3>The Alton</h3>
+                    <p>⭐ 4.5 | Rp390.000,00/night</p>
+                    <button onclick="openModal('The Alton', '⭐ 4.5 | Rp390.000,00/night', 'Jl. Prof. Soedarto No.10, Pedalangan, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50268', '(+62)8112787257', 'Public Facilities: AC, Ballroom, Family room, Fireplace in lobby, Heater, Non-smoking room, Swimming pool, Smoking area, Terrace, Coffee/tea in lobby, Coffee shop, Elevator, Restaurant, Breakfast restaurant, Lunch restaurant, WiFi, Disabled access friendly, Business center, 24-hour Receptionist', 'Cheapest Room Facilities: Air conditioning, 1 double bed, Furnished, 34m², TV, Desk, Full Kitchen, Towels, Toiletries, Coffee / tea maker, Free instant coffee, Complimentary tea', 'Most Expensive Room Facilities: Air conditioning, 1 double bed, Furnished, 34m², TV, Desk, Full Kitchen, Towels, Toiletries, Coffee / tea maker, Free instant coffee, Complimentary tea', 'Check-in at 14.00 and Check-out at 12.00', ['Rp390.000,00', 'Rp550.000,00'], ['Rp801.611,00', 'Rp1.177.321,00'], ['Rp683.555,00', 'Rp989.612,00'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Rumi.jpg" alt="Rumi">
+                    <h3>Rumi</h3>
+                    <p>⭐ 4.5 | Rp259.600,00/night</p>
+                    <button onclick="openModal('Rumi', '⭐ 4.5 | Rp259.600,00/night', 'Jl. Gondang Raya No.11, Bulusan, Kec. Tembalang, Kota Semarang, Jawa Tengah 50277', '(247)6922596', 'Public Facilities: AC, Non-Smoking Room, 24-Hour Room Service, WiFi In Public Area, 24-Hour Receptionist, 24-Hour Security, Parking, Elevator, Coffee/Tea In Lobby, Early Check-In, Late Check-Out, Desk, Shower, TV, LAN Internet, ATM/Banking, Grocery, Laundry, Shops, and Supermarket Nearby', 'Cheapest Room Facilities: Without breakfast, Standard twin bed, Shower, Air conditioning, Room Facilities, Air conditioning, Bathroom Amenities, Private bathroom, Toiletries, 18 m²', 'Most Expensive Room Facilities: Standard Room 2 Single Bed, Without Breakfast, Shower, Air conditioning, Room Facilities, Air conditioning, Bathroom Amenities, Private bathroom, Toiletries, 18 m²', 'Check-in at 14.00 and Check-out at 12.00', ['Rp259.600,00', 'Rp400.198,00'], ['Rp368.000,00', '-'], ['Rp372.639,00', '-'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Kars_Inn.jpg" alt="Kar's Inn">
+                    <h3>Kar's Inn</h3>
+                    <p>⭐ 3.8 | Rp339.888,00/night</p>
+                    <button onclick="openModal('Kars Inn', '⭐ 3.8 | Rp339.888,00/night', 'Jl. Banjarsari Jl. Iwenisari No.45 Kel, Tembalang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50271', '82323358232', 'Public Facilities: Parking, Elevator, Restaurant, WiFi In Public Area, Desk, Shower, TV, AC, Heater, 24-Hour Receptionist, 24-Hour Security, ATM/Banking, Supermarket Nearby, Free WiFi, Airport Transfer (Surcharge).', 'Cheapest Room Facilities: Without Breakfast, 1 double bed, 12 m², Non-Smoking Rooms, Air Conditioning, Complimentary Bottled Water, Television, Desk, Hot Water, Private Bathroom, Shower, Toiletries', 'Most Expensive Room Facilities: Without Breakfast, 1 double bed, 19 m², Non-Smoking Rooms, Air Conditioning, Complimentary Bottled Water, Television, Desk, Hot Water, Private Bathroom, Shower, Toiletries', 'Check-in at 14.00 and Check-out at 12.00', ['Rp339.888,00', 'Rp369.888,00'], ['Rp322.894,00', 'Rp360.894,00'], ['-', '-'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Cozy_Stay.jpg" alt="Cozy Stay Semarang">
+                    <h3>Cozy Stay Semarang</h3>
+                    <p>⭐ 4.5 | Rp361.104,00/night</p>
+                    <button onclick="openModal('Cozy Stay Semarang', '⭐ 4.5 | Rp361.104,00/night', 'Jl. Kedungmundu No.82, Tandang, Kec. Tembalang, Kota Semarang, Jawa Tengah 50273', '8112588339', 'Public Facilities: Wifi, Resepsionis 24 jam. Parkir, Lift, AC, Fasilitas Rapat, Spa', 'Cheapest Room Facilities: Non-Smoking Rooms, Kitchen, Stovetop, Private Bathroom, Refrigerator, and 1 Queen Bed.', '', 'Check-in at 14.00 and Check-out at 12.00', ['Rp361.104,00', 'Rp409.574,00'], ['Rp190.546,00', 'Rp391.075,00'], ['-', '-'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Plaza.jpg" alt="Hotel Plaza">
+                    <h3>Hotel Plaza</h3>
+                    <p>⭐ 4.3 | Rp245.555,00/night</p>
+                    <button onclick="openModal('Hotel Plaza', '⭐ 4.3 | Rp245.555,00/night', 'Jl. Setia Budi No.101-103, Srondol Kulon, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50263', '247473188', 'Public Facilities: Wifi, Resepsionis 24 jam. Tempat parkir mobil, Layanan kamar 24 jam, Kedai kopi, Penarikan uang tunai, Laundry, Meeting Facilities', 'Cheapest Room Facilities: Pancuran, TV layar datar, Wifi, Perlengkapan mandi, AC', 'Most Expensive Room Facilities: Pancuran dan bak mandi, 1 kasur single 1 kasur double, termasuk sarapan, Ukuran kamar 30 m², Wifi, AC', 'Check-in at 14.00 and Check-out at 12.00', ['Rp245.555,00', 'Rp355.888,00'], ['Rp231.000,00', '-'], ['Rp225.498,00', 'Rp400.853,00'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Hazotel.jpg" alt="Hazotel">
+                    <h3>Hazotel</h3>
+                    <p>⭐ 4.1 | Rp267.750,00/night</p>
+                    <button onclick="openModal('Hazotel', '⭐ 4.1 | Rp267.750,00/night', 'Jl. Durian Raya No.27, Srondol Wetan, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50263', '2476402001', 'Public Facilities: Wifi, Bar, Parkir gratis, Fasilitas laundry, AC, Resepsionis 24 jam, Fasilitas rapat, Kedai kopi, Lift.', 'Facilities: Wifi gratis, TV layar datar, Perlengkapan mandi gratis.', '', 'Check-in at 14.00 and Check-out at 12.00', ['Rp267.750,00', 'Rp340.000,00'], ['Rp248.899,00', 'Rp389.986,00'], ['Rp218.546,00', 'Rp357.873,00'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Serrata.jpg" alt="Hotel Serrata">
+                    <h3>Hotel Serrata</h3>
+                    <p>⭐ 4 | Rp400.000,00/night</p>
+                    <button onclick="openModal('Hotel Serrata', '⭐ 4 | Rp400.000,00/night', 'Jl. Setia Budi No.108, Sumurboto, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50269', '247470270', 'Public Facilities: Wifi, Resepsionis 24 jam, Parkir, Restoran, Kolam renang, Fasilitas rapat', 'Cheapest Room Facilities: Bathtub, kulkas, AC, Televisi, Minibar, Pembuat kamar, Shower, 2 kasur single', 'Most Expensive Room Facilities: Kulkas, AC, Housekeeping, AC, Televisi, Brankas dalam kamar, Shower atau bathtub, Hair Dryer, Bathrobes, Double bed', 'Check-in at 14.00 and Check-out at 12.00', ['Rp400.000,00', 'Rp400.000,00'], ['Rp330.579,00', 'Rp330.579,00'], ['-', '-'])">Details</button>
+                </div>
+                <div class="hotel-card">
+                    <img src="Bukit_Jaya.jpg" alt="Bukit Jaya Residence">
+                    <h3>Bukit Jaya Residence</h3>
+                    <p>⭐ 4.7 | Rp2.645.331,00/night</p>
+                    <button onclick="openModal('Bukit Jaya Residence', '⭐ 4.7 | Rp2.645.331,00/night', 'JL Bukit Jaya, No. 12 A, Perumahan Bukit Sari, Ngesrep, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50261', '87757779000', 'Public Facilities: Disabled Access Friendly, Accessibility Equipment, Accessible Bathroom, Accessible Parking, AC, Non-Smoking Room, Smoking Area, Desk, Shower, TV, Parking, WiFi In Public Area, 24-Hour Security, Laundry Service, Fitness Center, LAN Internet, Shops Nearby', 'Cheapest Room Facilities: Without breakfast, 88.0 m², Free WiFi, Housekeeping, Non-Smoking Rooms, Air Conditioning, Complimentary Bottled Water, Electric Kettle, Television, Desk, Separate Dining Area, Private Bathroom, Shower, Toiletries, Towels, Hair Dryer, Hair Dryer (On Request), 2 King Beds', 'Most Expensive Room Facilities: Without breakfast, 2 King Beds, 99 m²/1066 ft², Garden View, Balcony/Terrace, Non-Smoking, 2 Bathrooms, Shower, 2 Bedrooms', 'Check-in at 14.00 and Check-out at 12.00', ['Rp2.645.331,00', '-'], ['Rp563.753,00', 'Rp1.357.588,00'], ['Rp1.585.066,00', 'Rp2.957.589,00'])">Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container" id="map">
+            <iframe src="http://localhost:8082/mapstore/dashboard-embedded.html#/40"></iframe>
+        </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <section id="team" class="section">
+        <h1>Meet Our Team</h1>
+        <div class="team">
+            <div class="team-member">
+                <img src="Elinda Rachmawati.jpg" alt="Member 1">
+                <h4>Elinda Rachmawati</h4>
+                <p>21110121130041</p>
+            </div>
+            <div class="team-member">
+                <img src="Rezqi Abrar.jpg" alt="Member 2">
+                <h4>Rezqi Abrar</h4>
+                <p>21110121130060</p>
+            </div>
+            <div class="team-member">
+                <img src="Arifin Septian Nugroho.jpg" alt="Member 3">
+                <h4>Arifin Septian Nugroho</h4>
+                <p>21110121140094</p>
+            </div>
+            <div class="team-member">
+                <img src="Muhammad Hisyam Rafi.jpg" alt="Member 4">
+                <h4>Muhammad Hisyam Rafi</h4>
+                <p>21110121140175</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="hotelModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            <h3 id="hotelName"></h3>
+            <p id="hotelRating"></p>
+            <p id="hotelAddress"></p>
+            <p id="hotelContact"></p>
+            <p id="hotelPublic"></p>
+            <p id="hotelCheapest"></p>
+            <p id="hotelExpensive"></p>
+            <p id="hotelChecktime"></p>
+            <table id="hotelTable">
+                <thead>
+                    <tr>
+                        <th>Traveloka</th>
+                        <th>Tiketcom</th>
+                        <th>Agoda</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dynamic table rows will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 StayMap. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Modal functionality
+        function openModal(name, rating, address, contact, public, cheapest, expensive, checktime, priceTraveloka, priceTiketcom, priceAgoda) {
+    document.getElementById('hotelName').textContent = name;
+    document.getElementById('hotelRating').textContent = rating;
+    document.getElementById('hotelAddress').textContent = address;
+    document.getElementById('hotelContact').textContent = contact;
+    document.getElementById('hotelPublic').textContent = public;
+    document.getElementById('hotelCheapest').textContent = cheapest;
+    document.getElementById('hotelExpensive').textContent = expensive;
+    document.getElementById('hotelChecktime').textContent = checktime;
+
+    var tableBody = document.querySelector('#hotelTable tbody');
+    tableBody.innerHTML = ''; // Clear previous rows
+
+    // Assuming the arrays are the same length
+    for (var i = 0; i < priceTraveloka.length; i++) {
+        var row = document.createElement('tr');
+
+        var cell1 = document.createElement('td');
+        cell1.textContent = priceTraveloka[i];
+        row.appendChild(cell1);
+
+        var cell2 = document.createElement('td');
+        cell2.textContent = priceTiketcom[i];
+        row.appendChild(cell2);
+
+        var cell3 = document.createElement('td');
+        cell3.textContent = priceAgoda[i];
+        row.appendChild(cell3);
+
+        tableBody.appendChild(row);
+    }
+
+    document.getElementById('hotelModal').style.display = 'flex';
+}
+
+
+        function closeModal() {
+            document.getElementById('hotelModal').style.display = 'none';
+        }
+
+        // Hotel search filter
+        function filterHotels() {
+            var input = document.getElementById('searchBar');
+            var filter = input.value.toLowerCase();
+            var hotelCards = document.querySelectorAll('.hotel-card');
+            hotelCards.forEach(function(card) {
+                var title = card.querySelector('h3').textContent.toLowerCase();
+                if (title.indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
